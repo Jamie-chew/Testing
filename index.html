@@ -35,6 +35,12 @@
             </div>
         </section>
     </main>
+    <script>
+        if (!sessionStorage.getItem('visited')) {
+            localStorage.removeItem('cart');
+            sessionStorage.setItem('visited', 'true');
+        }
+    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
