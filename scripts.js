@@ -1,8 +1,3 @@
-        if (!sessionStorage.getItem('visited')) {
-            localStorage.removeItem('cart');
-            sessionStorage.setItem('visited', 'true');
-        }
-
 document.addEventListener('DOMContentLoaded', () => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const products = document.querySelectorAll('.product');
