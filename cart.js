@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Clear cart data on page load to reset the cart
-    localStorage.removeItem('cart');
-
-    // Initialize an empty cart
-    const cart = [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemsList = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
     const discountedTotalPriceElement = document.getElementById('discounted-total-price');
