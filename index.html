@@ -20,21 +20,28 @@
             <h2>Products</h2>
             <div class="product" data-id="1" data-name="Product 1" data-price="10.00">
                 <h3>Product 1</h3>
-                <p>RM10.00</p>
+                <p>$10.00</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="product" data-id="2" data-name="Product 2" data-price="15.00">
                 <h3>Product 2</h3>
-                <p>RM15.00</p>
+                <p>$15.00</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="product" data-id="3" data-name="Product 3" data-price="20.00">
                 <h3>Product 3</h3>
-                <p>RM20.00</p>
+                <p>$20.00</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
         </section>
     </main>
-    <script src="scripts.js"></script>
+    <script>
+        // Clear the cart only if this is the first visit in this session
+        if (!sessionStorage.getItem('visited')) {
+            localStorage.removeItem('cart');
+            sessionStorage.setItem('visited', 'true');
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
